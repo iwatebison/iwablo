@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Rimworld 1.4 MODメモ | 岩風呂</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="基礎MOD　ほぼ前提 Startup Impact  Modロード時間の計測  Colony Groups  上部UI改善  Dubs Mint Minimap Dubs Mint Menus Vanilla Social Interactions Expanded Character Editor Pick Up And Haul Common Sense OgreStack Stackable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Rimworld 1.4 MODメモ">
+<meta property="og:url" content="https://github.com/iwatebison/iwablo/2022/12/14/Rimworld-1-4-MOD%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%BE%E3%81%99/index.html">
+<meta property="og:site_name" content="岩風呂">
+<meta property="og:description" content="基礎MOD　ほぼ前提 Startup Impact  Modロード時間の計測  Colony Groups  上部UI改善  Dubs Mint Minimap Dubs Mint Menus Vanilla Social Interactions Expanded Character Editor Pick Up And Haul Common Sense OgreStack Stackable">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-12-14T10:53:25.361Z">
+<meta property="article:modified_time" content="2022-12-14T12:26:27.379Z">
+<meta property="article:author" content="iwatebison">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="Rimworld">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/iwablo/css/style.css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<div class="blog-title">
+		<h1>
+			<a href="/iwablo/">岩風呂</a>
+		</h1>
+		<h2>
+			いわてバイソンのブログ
+		</h2>
+	</div>
+	<nav class="nav">
+		<ul>
+			<li><a href="/iwablo">Home</a></li><li><a href="/iwablo">Archives</a></li><li><a href="/iwablo">About</a></li>
+			
+		</ul>
+    </nav>
+</header>
+
+    <div id="main">
+      <article id="post-Rimworld-1-4-MODについてお話します" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/iwablo/2022/12/14/Rimworld-1-4-MODについてお話します/" class="article-date">
+  <time datetime="2022-12-14T10:53:25.361Z" itemprop="datePublished">2022-12-14</time>
+</a>
+		</span>
+		<span class="meta-elements author">iwatebison</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Rimworld 1.4 MODメモ
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h2 id="基礎MOD-ほぼ前提"><a href="#基礎MOD-ほぼ前提" class="headerlink" title="基礎MOD　ほぼ前提"></a>基礎MOD　ほぼ前提</h2><ul>
+<li>Startup Impact</li>
+</ul>
+<p>Modロード時間の計測</p>
+<ul>
+<li>Colony Groups</li>
+</ul>
+<p>上部UI改善</p>
+<ul>
+<li>Dubs Mint Minimap</li>
+<li>Dubs Mint Menus</li>
+<li>Vanilla Social Interactions Expanded</li>
+<li>Character Editor</li>
+<li>Pick Up And Haul</li>
+<li>Common Sense</li>
+<li>OgreStack</li>
+<li>Stackable Chunks</li>
+<li>QualityBuilder</li>
+<li>Trap Disable</li>
+<li>Smart Farming</li>
+<li>DontBlockDoor</li>
+<li>Replace Stuff</li>
+<li>Camera＋</li>
+<li>RimHUD</li>
+<li>Map Preview</li>
+</ul>
+<p>入植前に地形を確認したりできるらしい</p>
+<ul>
+<li>Allow Tool</li>
+</ul>
+<p>緊急運搬、トドメなど</p>
+<ul>
+<li>TD Enhancement Pack</li>
+<li>Damage Indicators</li>
+<li>Simple sidearms</li>
+</ul>
+<p>サブ武器</p>
+<ul>
+<li>No Forced Slowdown</li>
+<li>Work Tab</li>
+<li>Medical Tab</li>
+</ul>
+<p>医療タブ追加</p>
+<ul>
+<li>DragSelect</li>
+<li>Functional Room</li>
+<li>No Lazy Doctors</li>
+<li>Wake Up</li>
+<li>Restock Notification</li>
+<li>Smarter Construction</li>
+<li>Food Poisoning Stack Fix</li>
+<li>Non uno Pinata</li>
+<li>Undraft After Tucking</li>
+<li>Simple sidearms</li>
+<li>No Random Construction Quality</li>
+<li>Mad Skills</li>
+<li>Graze up</li>
+<li>More Trait Slots</li>
+<li>Mortar Accuracy</li>
+<li>Draw a bead</li>
+<li>Prisoners Are Not Swines</li>
+<li>Draftable Animals</li>
+<li>VFME - Caravan Packs!</li>
+<li>Almost There!</li>
+<li>Optimization: Meats - C# Edition</li>
+<li>Fast Decompose</li>
+<li>The Harvest</li>
+<li>Search and Destroy</li>
+<li>ZeroCostImplants</li>
+<li>Animals Gender On Caravan</li>
+<li>Psychic Emanator Effect Off</li>
+<li>No more sleeping Z’s</li>
+<li>Interaction Bubbles</li>
+<li>Pawn Badge Fan Fork</li>
+<li>Bradson’s Main Button Icons for VTE</li>
+<li>RocketMan</li>
+<li>Reseach Powl</li>
+<li>Performance Optimizer</li>
+<li>Caravan Lag Eliminator</li>
+<li>Filth Vanishes With Rain And Time</li>
+<li>Job In Bar</li>
+<li>Bionic icons</li>
+<li>Quality Colors</li>
+<li>Show Hair With Hats or Hide All Hats</li>
+<li>No Power Wires</li>
+<li>P-Music</li>
+<li>Cherry Picker (dev)</li>
+</ul>
+<p>MODの要素毎に無効にしたり出来るっぽい。自分で使う気はないけど敵が持ってきたら強すぎて面倒くさいMOD武器とかを選んで無効化するとか。</p>
+<ul>
+<li>Easy Speedup</li>
+<li>Misc. MapGenerator</li>
+<li>More Faction Interaction</li>
+<li>Raid Extension</li>
+<li>Realistic Rooms Rewritten</li>
+</ul>
+<p>部屋の広さの満足度を現実的に</p>
+<ul>
+<li>Uncompromising Tribal Faction</li>
+</ul>
+<p>蛮族が強くなるやつ</p>
+<ul>
+<li>LWM’s Deep Storage</li>
+</ul>
+<p>雑多に詰め込めるストレージをいくつか追加</p>
+<ul>
+<li>DE Surgeries Color</li>
+</ul>
+<p>手術拡張</p>
+<h2 id="建築・設備・クラフト-ほぼ必須"><a href="#建築・設備・クラフト-ほぼ必須" class="headerlink" title="建築・設備・クラフト ほぼ必須"></a>建築・設備・クラフト ほぼ必須</h2><ul>
+<li>RimFridge</li>
+<li>Wall Light</li>
+<li>Subsurface Conduit</li>
+<li>PET FOOD PLUS</li>
+<li>RT Solar Flare Shield</li>
+</ul>
+<p>太陽フレアシールド　高熱かつ瞬発的高消費電力</p>
+<p>* </p>
+<h2 id="VEFシリーズ-必須にしてもいいくらい-ちょうどいいところを手探りで"><a href="#VEFシリーズ-必須にしてもいいくらい-ちょうどいいところを手探りで" class="headerlink" title="VEFシリーズ　必須にしてもいいくらい　ちょうどいいところを手探りで"></a>VEFシリーズ　必須にしてもいいくらい　ちょうどいいところを手探りで</h2><p>* </p>
+<h2 id="大型MOD-1プレイ1～2くらいに制限した方がいいと思う"><a href="#大型MOD-1プレイ1～2くらいに制限した方がいいと思う" class="headerlink" title="大型MOD　1プレイ1～2くらいに制限した方がいいと思う"></a>大型MOD　1プレイ1～2くらいに制限した方がいいと思う</h2><ul>
+<li>Hospitality</li>
+</ul>
+<p>宿屋プレイ</p>
+<h2 id="種族等-増やしすぎるとなんかヤな感じになる"><a href="#種族等-増やしすぎるとなんかヤな感じになる" class="headerlink" title="種族等　増やしすぎるとなんかヤな感じになる"></a>種族等　増やしすぎるとなんかヤな感じになる</h2><ul>
+<li>Facial Animation - WIP</li>
+</ul>
+<p>表情追加、HARとかの拡張がまた別にあるので種族ごとに追加したりする</p>
+<ul>
+<li>Yuran race</li>
+</ul>
+<p>うさぎ</p>
+<ul>
+<li>Kurin, The Three Tailed Fox</li>
+</ul>
+<p>キツネ</p>
+<ul>
+<li>Miho, the celestial fox</li>
+</ul>
+<p>キツネ2</p>
+<ul>
+<li>Paniel the Automata</li>
+</ul>
+<p>オートマトン、仕組みがめんどくさい</p>
+<ul>
+<li>Ancient Species</li>
+</ul>
+<p>エンシェントエルフ　クソ強い</p>
+<h2 id="追加候補"><a href="#追加候補" class="headerlink" title="追加候補"></a>追加候補</h2><ul>
+<li></li>
+</ul>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/iwablo/tags/Rimworld/" rel="tag">Rimworld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/iwablo/tags/blog/" rel="tag">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+  
+    <a href="/iwablo/2022/11/20/アゲインスト・ザ・ストームについてお話します-その2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          アゲインスト・ザ・ストームについてお話します　その2
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:github.com/iwatebison/iwablo">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/iwablo/">岩風呂</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2022 iwatebison<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//oss.maxcdn.com/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/iwablo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/iwablo/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+<script src="/iwablo/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
