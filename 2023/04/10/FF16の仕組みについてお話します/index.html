@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>FF16の仕組みについてお話します | 岩風呂</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="お話します  ストーリー&#x2F;アクションフォーカスモードに殆ど差はない  ２つのモードが用意されていると言う触れ込みだが、ここはかなり誤解を生んでいるように思う。実際はこの２つのモードにはほとんど差はないとのこと。 ストーリーフォーカスモードはごく僅かに敵が弱い程度で、サポートアクセサリが最初から装備されている状態から始まり、アクションフォーカスモードは、サポートアクセサリは所持しているが装備され">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FF16の仕組みについてお話します">
+<meta property="og:url" content="https://github.com/iwatebison/iwablo/2023/04/10/FF16%E3%81%AE%E4%BB%95%E7%B5%84%E3%81%BF%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%8A%E8%A9%B1%E3%81%97%E3%81%BE%E3%81%99/index.html">
+<meta property="og:site_name" content="岩風呂">
+<meta property="og:description" content="お話します  ストーリー&#x2F;アクションフォーカスモードに殆ど差はない  ２つのモードが用意されていると言う触れ込みだが、ここはかなり誤解を生んでいるように思う。実際はこの２つのモードにはほとんど差はないとのこと。 ストーリーフォーカスモードはごく僅かに敵が弱い程度で、サポートアクセサリが最初から装備されている状態から始まり、アクションフォーカスモードは、サポートアクセサリは所持しているが装備され">
+<meta property="og:locale">
+<meta property="article:published_time" content="2023-04-10T11:30:15.879Z">
+<meta property="article:modified_time" content="2023-04-11T05:33:00.045Z">
+<meta property="article:author" content="iwatebison">
+<meta property="article:tag" content="blog">
+<meta property="article:tag" content="FF16">
+<meta name="twitter:card" content="summary">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/iwablo/css/style.css">
+
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<div class="blog-title">
+		<h1>
+			<a href="/iwablo/">岩風呂</a>
+		</h1>
+		<h2>
+			いわてバイソンのブログ
+		</h2>
+	</div>
+	<nav class="nav">
+		<ul>
+			<li><a href="/iwablo">Home</a></li><li><a href="/iwablo">Archives</a></li><li><a href="/iwablo">About</a></li>
+			
+		</ul>
+    </nav>
+</header>
+
+    <div id="main">
+      <article id="post-FF16の仕組みについてお話します" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/iwablo/2023/04/10/FF16の仕組みについてお話します/" class="article-date">
+  <time datetime="2023-04-10T11:30:15.879Z" itemprop="datePublished">2023-04-10</time>
+</a>
+		</span>
+		<span class="meta-elements author">iwatebison</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      FF16の仕組みについてお話します
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<span id="more"></span>
+
+<h2 id="お話します"><a href="#お話します" class="headerlink" title="お話します"></a>お話します</h2><hr>
+<details>
+<summary><font size="4"><b>ストーリー/アクションフォーカスモードに殆ど差はない</font></b></summary>
+
+<p>２つのモードが用意されていると言う触れ込みだが、ここはかなり誤解を生んでいるように思う。実際はこの２つのモードにはほとんど差はないとのこと。</p>
+<p>ストーリーフォーカスモードはごく僅かに敵が弱い程度で、サポートアクセサリが最初から装備されている状態から始まり、アクションフォーカスモードは、サポートアクセサリは所持しているが装備されていない状態で始まる。別にストーリー進行の中でサポートアクセサリを取得してとかそういうこともない。どちらもすべてのサポートアクセサリを初期所持している。それ以外の要素に全く差は無いとのこと。</p>
+<p>つまり、ストーリーフォーカスモードはマジで説明書などを読まず、事前情報も得ずにゲームを始めて、アクセサリの着脱の仕方とかもよくわからんけど、ストーリーだけを楽しみたいみたいな、そういう人に向けていると思われる。10年のFF14運営を通して、本当にそういうプレイヤーがたくさんいるということを知っているからこそ、ここまでナメた（適切な表現）モードを用意しているのだと思う。</p>
+<p>1周目はアクションフォーカスで始めて、色々アクセをつけたり外したりしながら進めていくのがいいと思う。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>難易度の棲み分けがどう転ぶか？</font></b></summary>
+
+<p>サポートアクセサリは、オートコンボ、オートスロウ、オート回避、オートポーション、オートトルガルの全5種類で、初期所持でこれ以外が増えることも無いとのこと。</p>
+<p>この中で、特にオート回避＋オートコンボなどはゲーム難易度を完全に破壊するレベルのものだと思われる（オート回避の発動が自身の攻撃モーション中とかだと無効、などであればまた別だが）。本作は1周目の難易度を意図的に易しめにしているような発言があったので、ストーリークリアまでは本当に誰でもクリア可能な、FF14のメインくらいのものに調整していると予想される。</p>
+<p>そして、サポート無効になる難易度の髙いバトルは2周目以降に完全に分化されているようで、これによって双方のニーズを満たそうという試みのようだ。</p>
+<p>この試みは妥当だと思うが、実際、どうなんだろうか。</p>
+<p>1周目のシナリオに紐づいた新鮮なゲーム体験が、あまりにも易しすぎると体験としての高揚が薄れる危険もあると考えられる。それを各自で調節してねという設計なのはわかるが、人は低きに流れる面もあるので、サポートアクセが所持品にあるという事実そのものが、そのあたりの体験を損ねることにもつながってしまうことも考えられないだろうか。</p>
+<p>良い体験を得るために、強い心で自分を律しながら、アクションフォーカスモードアクセ縛りで1周目を終えたいものである。それでもヌルゲーだったらゲーム側の責任。</p>
+<p>せめて1周目ラスボスはFF14の極レベルくらいは欲しい、サポート付きで誰でもクリア可能なギリギリの極。</p>
+<p>ちなみにオートトルガルはつけなくても基本トルガルは自律行動する（周辺雑魚を抑えるAI）。オートトルガル装備時はクライヴの攻撃に追撃するなどのコンビネーション型のAIに切り替わる、というもののようだ。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>召喚獣アビリティの種類と組み合わせ</font></b></summary>
+
+<p>召喚獣アビリティは、4種類から2つを選んでセットするアクションと、召喚獣固有のフィートの1つで構成されるパレットを切り替え可能。</p>
+<p>それぞれのアクションにはおそらく、ダメージ系（高威力）、テイクダウン系（低威力高ウィル）、カウンター系などがあると思われる。ウィルゲージがある中型以上のエネミーに対しては、テイクダウン系の技（おそらくダメージが低いタイプの技）でウィルゲージを削り、テイクダウン後に高威力スキルを叩き込むのが基本となるだろう。</p>
+<p>カウンター型は特定のボスが繰り出す技に対する明確なアンチとして設計されていると思われる。特殊カウンターが決まるとダメージやスコアも伸びるということなので、高難易度以上の攻略やスコアアタックでは必須になると思われる。</p>
+<p>フィートは召喚獣パレット固有のもので、変更できない。フェニックスならシフト、ガルーダならエンブレイス、タイタンならガードなど。</p>
+<p>また召喚獣アビリティは、マスターまで育成すると他の召喚獣パレットにねじ込むことができるようになる。つまり、使い勝手のいいフィートの召喚獣パレットに、使い勝手のいい召喚獣アクションを自由に組み合わせるなどが可能。おそらく特殊カウンターが2択あるボスなどが今後存在し、別種のカウンター技をセットしたパレットを用意しておくなど、高難易度攻略にも必須のものと思われる。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>バハムートとオーディンは特殊</font></b></summary>
+
+<p>現時点でバハムートとオーディンは通常のパレットの他に、専用のゲージ（メガフレアと斬鉄剣）が用意されている。</p>
+<p>見たところそのパレットに切り替えた状態でダメージを与えるとゲージが増え、溜まったゲージ量で特殊アクションのダメージや挙動、効果などが強化されていくなどの仕組みだと思われる。</p>
+<p>このゲージが、マスター化した別召喚獣のアクションで与えたダメージでも加算されるかどうかは不明。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>戦闘中の仲間アクションも結構ある？</font></b></summary>
+
+<p>クライヴがリクイドフレイムと戦っていると思われる動画（戦闘UIがクライヴ）で、シヴァ（おそらくジル）がダイヤモンドダストをリアルタイムで発動しているシーンがあったので、なんかいろいろある気がする。でもそんなポンポン召喚獣化できる設定じゃないとも思うので、どうするんでしょうね。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>マップの広さやワールドマップの仕様について</font></b></summary>
+
+<p>おそらくチョコボに乗れる開放マップが4つ、それぞれ2x2km規模程、FF14の1マップと同等くらいらしい。そのマップを基準として、メインストーリーの進行によりいわゆるステージと呼ばれるダンジョンにアクセスしていく形になるのだろうか？</p>
+<p>ワールドマップはメニューからいつでも開けるようで、上記のステージ攻略中以外はいつでもランドマークにファストトラベルできるような印象だった。ストーリーはFF13と同じリニア形式で分岐が無いが、FF13との大きな違いはこのワールドマップを介して以前行った街に戻ったり、探索したりできる点だろう。</p>
+<p>そうなると、マップ4つというのが基本的なストーリーで訪れる地方の大枠のくくりになる気がする。その間を様々なステージがつなぐというイメージか？（地域がストーリー進行で変わると前の地域に戻れるかどうかは未知、おそらくここは大きな変化が発生したあとは戻れないこともあると思う。）</p>
+<p>いま地域として出ているのがヴァリスゼア南西地方（ロザリア、ザンブレク、ダルメキア、クリスタル自治領（鉄王国も？）をカバーしているようにみえる）、おそらく確実に、ウォールードのある東の霧の大陸も行くだろう。北西地方は国家もなく、全く情報がないが、ジルやトルガルの出身なのでは？という話もあるので、怪しい。あとは絶対空の文明関連の地域もあると思うので、このあたりがいわゆる開放マップ4種の地方の候補だろうか。</p>
+</details>
+
+<details>
+<summary><font size="4"><b>グラフィック/FPS優先モードとフォトモード</font></b></summary>
+
+<p>2K60FPSのモードと4Kモード（FPS不明）らしい　多分30FPS。アクションで30FPSとか無いので基本FPSモードでやると思う。<br>簡単なフォトモードがあるらしいので4Kモードはこれのときにだけ使うか。</p>
+</details>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/iwablo/tags/FF16/" rel="tag">FF16</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/iwablo/tags/blog/" rel="tag">blog</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+  
+    <a href="/iwablo/2023/03/31/FF16の事前情報についてお話します/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          FF16の事前情報についてお話します
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:github.com/iwatebison/iwablo">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/iwablo/">岩風呂</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2023 iwatebison<br>
+		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	</span>
+</footer>
+    
+
+<script src="//oss.maxcdn.com/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/iwablo/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/iwablo/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+<script src="/iwablo/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
